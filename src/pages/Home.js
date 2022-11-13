@@ -37,6 +37,13 @@ export default function Home() {
                 <td>{user.lastName}</td>
                 <td>{user.email}</td>
                 <td>{user.phoneNumber}</td>
+                <td>
+                  <button className="btn btn-outline-info mx-2">View</button>
+                  <button className="btn btn-outline-success mx-2">Edit</button>
+                  <button className="btn btn-outline-danger mx-2">
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
