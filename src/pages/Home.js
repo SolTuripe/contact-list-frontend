@@ -29,9 +29,9 @@ export default function Home() {
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
-              <th scope="col">Last Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone Number</th>
+              <th scope="col">Last name</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Phone number</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
@@ -46,7 +46,12 @@ export default function Home() {
                 <td>{user.email}</td>
                 <td>{user.phoneNumber}</td>
                 <td>
-                  <button className="btn btn-outline-info mx-2">View</button>
+                  <Link
+                    className="btn btn-outline-info mx-2"
+                    to={`/viewuser/${user.id}`}
+                  >
+                    View
+                  </Link>
                   <Link
                     className="btn btn-outline-success mx-2"
                     to={`/edituser/${user.id}`}
