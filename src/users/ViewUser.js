@@ -49,7 +49,7 @@ export default function ViewUser() {
               </ul>
             </div>
           </div>
-          <Link className="btn btn-primary my-2" to={"/"}>
+          <Link className="btn btn-outline-secondary my-2" to={"/"}>
             Back to Home
           </Link>
         </div>

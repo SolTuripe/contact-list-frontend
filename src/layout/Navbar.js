@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-info">
-        <div className="container-fluid">
+      <nav className="navbar navbar-expand-lg navbar-dark d-flex bg-secondary">
+        <div className="container-fluid d-flex justify-content-around">
           <Link className="navbar-brand" to={"/"}>
             Contact List
           </Link>

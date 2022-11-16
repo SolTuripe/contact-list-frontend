@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <div className="py-4">
+      <div className="py-5">
         <table className="table border shadow">
           <thead>
             <tr>
@@ -47,7 +47,7 @@ export default function Home() {
                 <td>{user.phoneNumber}</td>
                 <td>
                   <Link
-                    className="btn btn-outline-info mx-2"
+                    className="btn btn-outline-dark mx-2"
                     to={`/viewuser/${user.id}`}
                   >
                     View
