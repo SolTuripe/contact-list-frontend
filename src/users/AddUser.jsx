@@ -41,9 +41,10 @@ export default function AddUser() {
                 Name
               </label>
               <input
-                type={"text"}
+                type="text"
                 className="form-control"
                 placeholder="Enter your name"
+                required
                 name="name"
                 value={name}
                 onChange={(e) => onInputChange(e)}
@@ -54,9 +55,10 @@ export default function AddUser() {
                 Last Name
               </label>
               <input
-                type={"text"}
+                type="text"
                 className="form-control"
                 placeholder="Enter your last name"
+                required
                 name="lastName"
                 value={lastName}
                 onChange={(e) => onInputChange(e)}
@@ -67,9 +69,10 @@ export default function AddUser() {
                 E-mail
               </label>
               <input
-                type={"text"}
+                type="email"
                 className="form-control"
                 placeholder="Enter your email"
+                required
                 name="email"
                 value={email}
                 onChange={(e) => onInputChange(e)}
@@ -80,9 +83,11 @@ export default function AddUser() {
                 Phone number
               </label>
               <input
-                type={"text"}
+                type={"tel"}
                 className="form-control"
-                placeholder="Enter your phone number"
+                placeholder="Your cell phone must have 9 digits"
+                required
+                pattern="[0-9]{9}"
                 name="phoneNumber"
                 value={phoneNumber}
                 onChange={(e) => onInputChange(e)}

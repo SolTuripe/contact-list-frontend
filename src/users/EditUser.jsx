@@ -22,6 +22,7 @@ export default function EditUser() {
 
   useEffect(() => {
     loadUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSubmit = async (e) => {
@@ -51,9 +52,10 @@ export default function EditUser() {
                 Name
               </label>
               <input
-                type={"text"}
+                type="text"
                 className="form-control"
                 placeholder="Enter your name"
+                required
                 name="name"
                 value={name}
                 onChange={(e) => onInputChange(e)}
@@ -64,9 +66,10 @@ export default function EditUser() {
                 Last Name
               </label>
               <input
-                type={"text"}
+                type="text"
                 className="form-control"
                 placeholder="Enter your last name"
+                required
                 name="lastName"
                 value={lastName}
                 onChange={(e) => onInputChange(e)}
@@ -77,9 +80,10 @@ export default function EditUser() {
                 E-mail
               </label>
               <input
-                type={"text"}
+                type="email"
                 className="form-control"
                 placeholder="Enter your email"
+                required
                 name="email"
                 value={email}
                 onChange={(e) => onInputChange(e)}
@@ -90,9 +94,11 @@ export default function EditUser() {
                 Phone number
               </label>
               <input
-                type={"text"}
+                type="tel"
                 className="form-control"
-                placeholder="Enter your phone number"
+                placeholder="Your cell phone must have 9 digits"
+                required
+                pattern="[0-9]{9}"
                 name="phoneNumber"
                 value={phoneNumber}
                 onChange={(e) => onInputChange(e)}

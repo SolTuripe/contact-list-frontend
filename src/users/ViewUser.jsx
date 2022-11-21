@@ -14,6 +14,7 @@ export default function ViewUser() {
 
   useEffect(() => {
     loadUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadUser = async () => {
@@ -28,7 +29,7 @@ export default function ViewUser() {
           <h2 className="text-center m-4">Contact Details</h2>
           <div className="card">
             <div className="card-header">
-              Details of contact:
+              Information:
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   <b>Name: </b>
