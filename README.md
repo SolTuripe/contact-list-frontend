@@ -30,6 +30,10 @@ These instructions will allow you to get a working copy of the project on your l
 
 ## Demo of the proyect 🎥
 
+<p align="center"> 
+  <img src="./src/assets/contaclist.gif?raw=true" width=60%>
+</p>
+
 ## Available Scripts 👾
 
 In the project directory, you can run:
