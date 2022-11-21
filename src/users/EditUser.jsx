@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function EditUser() {
   let navigate = useNavigate();
@@ -27,6 +28,11 @@ export default function EditUser() {
     e.preventDefault();
     await axios.put(`http://localhost:8080/user/${id}`, user);
     navigate("/");
+    swal({
+      title: "Contact edited successfully",
+      text: "click 'ok' to continue",
+      icon: "success",
+    });
   };
 
   const loadUser = async () => {

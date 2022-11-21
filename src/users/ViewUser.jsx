@@ -28,7 +28,7 @@ export default function ViewUser() {
           <h2 className="text-center m-4">Contact Details</h2>
           <div className="card">
             <div className="card-header">
-              Details of contact id : {user.id}
+              Details of contact:
               <ul className="list-group list-group-flush">
                 <li className="list-group-item">
                   <b>Name: </b>

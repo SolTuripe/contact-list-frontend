@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function AddUser() {
   let navigate = useNavigate();
@@ -22,6 +23,11 @@ export default function AddUser() {
     e.preventDefault();
     await axios.post("http://localhost:8080/user", user);
     navigate("/");
+    swal({
+      title: "New contact added successfully",
+      text: "click 'ok' to continue",
+      icon: "success",
+    });
   };
 
   return (

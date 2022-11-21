@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
+import swal from "sweetalert";
 
 export default function Home() {
   const [users, setUsers] = useState([]);
@@ -19,6 +20,11 @@ export default function Home() {
   const deleteUser = async (id) => {
     await axios.delete(`http://localhost:8080/user/${id}`);
     loadUsers();
+    swal({
+      title: "Contact deleted",
+      text: "click 'ok' to continue",
+      icon: "success",
+    });
   };
 
   return (
